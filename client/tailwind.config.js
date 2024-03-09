@@ -10,8 +10,10 @@ export default {
     extend: {},
     fontFamily: {
       'pacifico': ['Pacifico', 'cursive'],
-      'script': ['M PLUS 1 Code', 'monospace'],
+      'lex': ['Lexend', 'sans-serif'],
       'mono': ['Sometype Mono', 'monospace'],
+      'noto': ['Noto Sans', 'sans-serif'],
+      'pop': ['Poppins', 'sans-serif'],
     },
     colors: {
       'logo': '#0E1E2E',

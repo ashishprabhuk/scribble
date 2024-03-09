@@ -30,15 +30,15 @@ export default function Header() {
           <FiSearch className="text-xl text-logo" />
         </Button>
         <div className="flex justify-center items-center gap-2 md:order-2">
-          <Button className="w-14 h-12" color="gray" pill>
+          <Button className="w-14 h-12 hidden lg:inline" color="gray" pill>
             <FaMoon className="text-lg text-logo" />
           </Button>
           <Button className="bg-logo" pill>
-            <Link to="/signin" className="text-base font-pacifico text-white">
+            <Link to="/signin" className="text-base font-semibold font-noto text-white">
               Sign In
             </Link>
           </Button>
-          <Navbar.Toggle className="text-4xl" barIcon={TbMenuDeep}>
+          <Navbar.Toggle className="text-logo" barIcon={TbMenuDeep}>
             <TbMenuDeep />
           </Navbar.Toggle>
         </div>
@@ -48,7 +48,7 @@ export default function Header() {
             as={"div"}
             className={path === "/" ? "text-blue-600" : "text-logo"}
           >
-            <Link to="/" className="font-pacifico text-base">
+            <Link to="/" className="font-noto text-lg">
               Home
             </Link>
           </Navbar.Link>
@@ -57,7 +57,7 @@ export default function Header() {
             as={"div"}
             className={path === "/dashboard" ? "text-blue-600" : "text-logo"}
           >
-            <Link to="/dashboard" className="font-pacifico text-base">
+            <Link to="/dashboard" className="font-noto text-lg">
               Dashboard
             </Link>
           </Navbar.Link>
@@ -66,7 +66,7 @@ export default function Header() {
             as={"div"}
             className={path === "/about" ? "text-blue-600" : "text-logo"}
           >
-            <Link to="/about" className="font-pacifico text-base">
+            <Link to="/about" className="font-noto text-lg">
               About
             </Link>
           </Navbar.Link>
