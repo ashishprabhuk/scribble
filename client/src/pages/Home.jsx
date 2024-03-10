@@ -1,7 +1,8 @@
+import CreatePost from "./CreatePost"
 export default function Home() {
   return (
     <div>
-      Home Page
+      <CreatePost/>
     </div>
   )
 }

@@ -8,7 +8,7 @@ export default function Header() {
   const path = useLocation().pathname;
   return (
     <>
-      <Navbar className="border-b-2">
+      <Navbar className="border-b-2 bg-blue-200">
         <Link
           to="/"
           className="flex justify-center items-center font-medium whitespace-nowrap"
@@ -18,6 +18,17 @@ export default function Header() {
             Scribble
           </div>
         </Link>
+        {/* <form>
+          <TextInput
+            type="text"
+            placeholder="Search..."
+            rightIcon={FiSearch}
+            className="hidden lg:inline rounded-8xl"
+          />
+        </form> */}
+        <Button className="w-14 h-12 lg:hidden" color="gray" pill>
+          <FiSearch className="text-xl text-logo" />
+        </Button>
         <form>
           <TextInput
             type="text"
@@ -26,9 +37,6 @@ export default function Header() {
             className="hidden lg:inline rounded-8xl"
           />
         </form>
-        <Button className="w-14 h-12 lg:hidden" color="gray" pill>
-          <FiSearch className="text-xl text-logo" />
-        </Button>
         <div className="flex justify-center items-center gap-2 md:order-2">
           <Button className="w-14 h-12 hidden lg:inline" color="gray" pill>
             <FaMoon className="text-lg text-logo" />
@@ -38,6 +46,7 @@ export default function Header() {
               Sign In
             </Link>
           </Button>
+          
           <Navbar.Toggle className="text-logo" barIcon={TbMenuDeep}>
             <TbMenuDeep />
           </Navbar.Toggle>
@@ -46,7 +55,7 @@ export default function Header() {
           <Navbar.Link
             active={path === "/"}
             as={"div"}
-            className={path === "/" ? "text-blue-600" : "text-logo"}
+            className={path === "/" ? "text-logo font-semibold" : "text-logo"}
           >
             <Link to="/" className="font-noto text-lg">
               Home
@@ -55,7 +64,7 @@ export default function Header() {
           <Navbar.Link
             active={path === "/dashboard"}
             as={"div"}
-            className={path === "/dashboard" ? "text-blue-600" : "text-logo"}
+            className={path === "/dashboard" ? "text-logo font-semibold" : "text-logo"}
           >
             <Link to="/dashboard" className="font-noto text-lg">
               Dashboard
@@ -64,14 +73,24 @@ export default function Header() {
           <Navbar.Link
             active={path === "/about"}
             as={"div"}
-            className={path === "/about" ? "text-blue-600" : "text-logo"}
+            className={path === "/about" ? "text-logo font-semibold" : "text-logo"}
           >
             <Link to="/about" className="font-noto text-lg">
               About
             </Link>
           </Navbar.Link>
         </Navbar.Collapse>
+        
+        <form>
+          <TextInput
+            type="text"
+            placeholder="Search..."
+            rightIcon={FiSearch}
+            className="hidden lg:inline rounded-8xl"
+          />
+        </form>
       </Navbar>
+      
     </>
   );
 }
