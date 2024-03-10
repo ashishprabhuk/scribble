@@ -18,17 +18,6 @@ export default function Header() {
             Scribble
           </div>
         </Link>
-        {/* <form>
-          <TextInput
-            type="text"
-            placeholder="Search..."
-            rightIcon={FiSearch}
-            className="hidden lg:inline rounded-8xl"
-          />
-        </form> */}
-        <Button className="w-14 h-12 lg:hidden" color="gray" pill>
-          <FiSearch className="text-xl text-logo" />
-        </Button>
         <form>
           <TextInput
             type="text"
@@ -37,16 +26,22 @@ export default function Header() {
             className="hidden lg:inline rounded-8xl"
           />
         </form>
+        <Button className="w-14 h-12 lg:hidden" color="gray" pill>
+          <FiSearch className="text-xl text-logo" />
+        </Button>
         <div className="flex justify-center items-center gap-2 md:order-2">
           <Button className="w-14 h-12 hidden lg:inline" color="gray" pill>
             <FaMoon className="text-lg text-logo" />
           </Button>
           <Button className="bg-logo" pill>
-            <Link to="/signin" className="text-base font-semibold font-noto text-white">
+            <Link
+              to="/signin"
+              className="text-base font-semibold font-noto text-white"
+            >
               Sign In
             </Link>
           </Button>
-          
+
           <Navbar.Toggle className="text-logo" barIcon={TbMenuDeep}>
             <TbMenuDeep />
           </Navbar.Toggle>
@@ -64,7 +59,9 @@ export default function Header() {
           <Navbar.Link
             active={path === "/dashboard"}
             as={"div"}
-            className={path === "/dashboard" ? "text-logo font-semibold" : "text-logo"}
+            className={
+              path === "/dashboard" ? "text-logo font-semibold" : "text-logo"
+            }
           >
             <Link to="/dashboard" className="font-noto text-lg">
               Dashboard
@@ -73,24 +70,16 @@ export default function Header() {
           <Navbar.Link
             active={path === "/about"}
             as={"div"}
-            className={path === "/about" ? "text-logo font-semibold" : "text-logo"}
+            className={
+              path === "/about" ? "text-logo font-semibold" : "text-logo"
+            }
           >
             <Link to="/about" className="font-noto text-lg">
               About
             </Link>
           </Navbar.Link>
         </Navbar.Collapse>
-        
-        <form>
-          <TextInput
-            type="text"
-            placeholder="Search..."
-            rightIcon={FiSearch}
-            className="hidden lg:inline rounded-8xl"
-          />
-        </form>
       </Navbar>
-      
     </>
   );
 }

@@ -41,7 +41,7 @@ export default function SignIn() {
               <Label
                 htmlFor="username"
                 className="text-logo"
-                value="Your name"
+                value="Name"
               />
               <TextInput
                 type="text"
